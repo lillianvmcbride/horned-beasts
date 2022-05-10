@@ -6,9 +6,9 @@
 
 import React from "react";
 import "./App.css";
-import Header from "./Header";
-import Main from "./Main";
-import Footer from "./Footer";
+import Header from "./components/Header";
+import Main from "./components/Main";
+import Footer from "./components/Footer";
 
 /**
  * The definition of the App class. It does not have a constructor, but
@@ -18,9 +18,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header header="Horned Beasts"/>
         <Main />
-        <Footer />
+        <Footer author="Lillian McBride" />
       </div>
     );
   }
