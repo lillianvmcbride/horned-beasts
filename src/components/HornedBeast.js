@@ -4,6 +4,7 @@
  * @description Renders Horned Beasts
  */
  import React from "react";
+ import { Image } from "react-bootstrap";
 
  class HornedBeast extends React.Component {
 
@@ -11,9 +12,9 @@
      return(
          <div className="HornedBeast">
             <h2>{this.props.title}</h2>
-            <img 
+            <Image
               src = {this.props.imageUrl} 
-              alt = "Some Horned Beast"
+              alt = {this.props.alt}
             />
             <p>{this.props.description}</p>
         </div>

@@ -9,6 +9,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
+import data from "./components/data.json";
 
 /**
  * The definition of the App class. It does not have a constructor, but
@@ -19,8 +20,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header header="Horned Beasts"/>
-        <Main />
-        <Footer author="Lillian McBride" />
+        <Main beasts={data}/>
+        <Footer author="Lillian McBride 2022" />
       </div>
     );
   }
