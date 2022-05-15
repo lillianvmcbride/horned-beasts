@@ -9,7 +9,8 @@
  class Header extends React.Component {
 
    render() {
-     return <h1 className="h1">{this.props.header}</h1>;
+     return <h1 onClick = {this.clickHandler}
+     className="h1">{this.props.header}</h1>;
    }
  }
  

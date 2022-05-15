@@ -18,6 +18,12 @@
   clickHandler = () => {
     let vote = this.state.votes + 1;
     this.setState({votes : vote});
+
+/**
+ * There's a problem here
+ */
+
+    this.props.clickkHandler(this.props.beast);
   }
 
    render() {
