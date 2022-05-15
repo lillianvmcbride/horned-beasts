@@ -4,6 +4,7 @@
  * @description Renders the header for Horned Beasts
  */
  import React from "react";
+ import "../App.css";
 
  class Header extends React.Component {
 

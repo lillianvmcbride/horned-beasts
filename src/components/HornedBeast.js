@@ -4,20 +4,20 @@
  * @description Renders Horned Beasts
  */
  import React from "react";
- import { Image } from "react-bootstrap";
+ import { Card } from "react-bootstrap";
 
  class HornedBeast extends React.Component {
 
    render() {
      return(
-         <div className="HornedBeast">
-            <h2>{this.props.title}</h2>
-            <Image
+         <Card style={{ width: '18rem' }}>
+            <Card.Title className="title">{this.props.title}</Card.Title>
+            <Card.Img style={{ width: '18rem' }}
               src = {this.props.imageUrl} 
               alt = {this.props.alt}
             />
-            <p>{this.props.description}</p>
-        </div>
+            <Card.Text className="text">{this.props.description}</Card.Text>
+          </Card>
      );
    }
  }

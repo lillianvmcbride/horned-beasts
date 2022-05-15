@@ -19,7 +19,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Header header="Horned Beasts"/>
+        <Header header="HORNED BEASTS"/>
         <Main beasts={data}/>
         <Footer author="Lillian McBride 2022" />
       </div>
