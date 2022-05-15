@@ -16,7 +16,9 @@
           // for (let i = 0; i < BeastRow.length; i++) 
           return (
          <Col key={beast._id}>
-         <HornedBeast key={beast._id} title={beast.title} alt={beast.title} description={beast.description}
+         <HornedBeast 
+         handleChange = {this.props.handleModal}
+         key={beast._id} title={beast.title} alt={beast.title} description={beast.description}
          imageUrl= {beast.image_url}/>
          </Col>
          );
