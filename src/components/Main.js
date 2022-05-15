@@ -4,18 +4,38 @@
  * @description Renders the main section of Horned Beasts
  */
  import React from "react";
- import HornedBeast from "./HornedBeast";
- import {Col, Container, Row} from "react-bootstrap";
+ import BeastRow from "./BeastRow";
 
  class Main extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {chosenBeasts: this.arrayOfRows(this.props.beasts)}
+
+  }
+
+  arrayOfRows(arr) {
+    let current = [];
+    let arrayRows = [];
+    for (let i = 0; i < arr.length; i++) {
+      if (i !== 0 && i % 3 === 0) {
+        arrayRows.push(current)
+        current = [];
+      }
+      current.push(arr[i]);
+    }
+    console.log(arrayRows);
+    return arrayRows;
+  }
+
    render() {
-     
-     const beast = this.props.beasts[0];
+    let chosenBeasts = this.arrayOfRows(this.props.beasts);
      return (
        <main>
-         <HornedBeast title={beast.title} alt={beast.title} description={beast.description}
-        imageUrl= {beast.image_url}/>
+         {chosenBeasts.map((three) => {
+          return <BeastRow beasts = {three} />
+         }
+         )}
        </main>
      );
    }

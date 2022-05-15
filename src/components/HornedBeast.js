@@ -4,20 +4,36 @@
  * @description Renders Horned Beasts
  */
  import React from "react";
- import { Image } from "react-bootstrap";
+ import { Card } from "react-bootstrap";
 
  class HornedBeast extends React.Component {
 
+  constructor(props){
+    super(props);
+    this.state = {
+      votes: 0,
+    };
+  }
+
+  clickHandler = () => {
+    let vote = this.state.votes + 1;
+    this.setState({votes : vote});
+  }
+
    render() {
      return(
-         <div className="HornedBeast">
-            <h2>{this.props.title}</h2>
-            <Image
+         <Card className="card" style={{ width: '18rem' }}>
+            <Card.Title className="title">{this.props.title}</Card.Title>
+            <Card.Img  
+              onClick={this.clickHandler}
+              className="beast" style={{ width: '18rem' }}
               src = {this.props.imageUrl} 
               alt = {this.props.alt}
             />
-            <p>{this.props.description}</p>
-        </div>
+            <Card.Text className="hearts">{this.state.votes}</Card.Text>
+            <Card.Img className="heart" src = "imgs/heart.jpg" />
+            <Card.Text className="text">{this.props.description}</Card.Text>
+          </Card>
      );
    }
  }
