@@ -29,17 +29,12 @@
   }
 
    render() {
-     let keyValue = 1;
+    let keyValue = 1;
     let chosenBeasts = this.arrayOfRows(this.props.beasts);
      return (
        <main>
          {chosenBeasts.map((three) => {
            keyValue++;
-
-/**
- * There's a problem here
- */
-
           return <BeastRow key={keyValue} beasts = {three} handleChange={this.props.handleChange}/>
          }
          )}
