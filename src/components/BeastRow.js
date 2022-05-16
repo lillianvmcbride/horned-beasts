@@ -17,7 +17,7 @@
           return (
          <Col key={beast._id}>
          <HornedBeast 
-         handleChange = {this.props.handleModal}
+         handleChange = {this.props.handleChange}
          key={beast._id} title={beast.title} alt={beast.title} description={beast.description}
          imageUrl= {beast.image_url}/>
          </Col>

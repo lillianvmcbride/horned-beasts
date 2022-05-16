@@ -41,11 +41,21 @@ body {
   background-color: #FFE8E8;
 }
 
+.row {
+  clear: both;
+}
+
+.col {
+  display: inline;
+}
+
 .card {
   background-color: aliceblue;
   border-radius: 20%;
   padding-right: 15px;
   margin-left: 40px;
+  display: inline;
+  float: left;
 }
 
 h1 {
@@ -72,6 +82,10 @@ h1 {
   margin: 20px;
 }
 
+.heart {
+  width: 20px;
+}
+
 .hearts {
   display: inline;
   color: #AA3939;
@@ -85,6 +99,11 @@ h1 {
   color: #AA3939;
   border-radius: 20%;
 
+}
+
+footer {
+  clear: both;
+  padding: 10px;
 }
 
 

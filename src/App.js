@@ -25,7 +25,7 @@ class App extends React.Component {
       }
     }
 
-  modalHandler = (beast) => {
+  handleChange = (beast) => {
     this.setState({
       show: true, beast: beast
     })
@@ -39,9 +39,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header header="HORNED BEASTS"/>
-        <Main beasts={data} handleModal={this.handleModal}/>
+        <Main beasts={data} handleChange={this.handleChange}/>
         <Footer author="Lillian McBride 2022" />
-        <SelectedBeast show={this.state.show} beast={this.state.beast} close={this.closeHandler}/>
+        <SelectedBeast show={this.state.show} beast={this.state.beast} onClose={this.closeHandler}/>
       </div>
     );
   }

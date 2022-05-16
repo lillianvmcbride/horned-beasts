@@ -5,6 +5,7 @@
  */
  import React from "react";
  import { Card } from "react-bootstrap";
+ import heart from "../imgs/heart.jpg";
 
  class HornedBeast extends React.Component {
 
@@ -23,7 +24,7 @@
  * There's a problem here
  */
 
-    this.props.clickkHandler(this.props.beast);
+    this.props.handleChange(this);
   }
 
    render() {
@@ -37,7 +38,7 @@
               alt = {this.props.alt}
             />
             <Card.Text className="hearts">{this.state.votes}</Card.Text>
-            <Card.Img className="heart" src = "imgs/heart.jpg" />
+            <Card.Img className="heart" src = {heart} />
             <Card.Text className="text">{this.props.description}</Card.Text>
           </Card>
      );
