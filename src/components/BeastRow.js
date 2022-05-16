@@ -19,7 +19,7 @@
          <HornedBeast 
          handleChange = {this.props.handleChange}
          key={beast._id} title={beast.title} alt={beast.title} description={beast.description}
-         imageUrl= {beast.image_url}/>
+         imageUrl= {beast.image_url} actualBeast={beast}/>
          </Col>
          );
         }
