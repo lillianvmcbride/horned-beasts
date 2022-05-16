@@ -19,12 +19,8 @@
   clickHandler = () => {
     let vote = this.state.votes + 1;
     this.setState({votes : vote});
-
-/**
- * There's a problem here
- */
-
-    this.props.handleChange(this);
+    console.log("horned beast.clickHandler", this.props.actualBeast.title);
+    this.props.handleChange(this.props.actualBeast);
   }
 
    render() {

@@ -54,6 +54,7 @@ body {
   border-radius: 20%;
   padding-right: 15px;
   margin-left: 40px;
+  margin-bottom: 10px;
   display: inline;
   float: left;
 }
@@ -106,5 +107,12 @@ footer {
   padding: 10px;
 }
 
+.modal-body {
+  background-color: antiquewhite;
 
+}
 
+.modal-body img {
+  max-width: 90%;
+  max-height: 90%;
+}
