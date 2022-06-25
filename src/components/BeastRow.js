@@ -13,7 +13,6 @@
    render() {
      return( <Row>
         {(this.props.beasts).map( (beast) => {
-          // for (let i = 0; i < BeastRow.length; i++) 
           return (
          <Col key={beast._id}>
          <HornedBeast 

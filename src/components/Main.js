@@ -28,6 +28,8 @@
     return arrayRows;
   }
 
+
+
    render() {
     let keyValue = 1;
     let chosenBeasts = this.arrayOfRows(this.props.beasts);
